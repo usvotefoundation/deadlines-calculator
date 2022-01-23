@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto/Roboto-Regular.ttf');
+}
+
+* {
+    font-family: 'Roboto';
+}
+
+.main-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.app-header {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+
+    .sign-out {
+        .amplify-button {
+            border-radius: 4px !important;
+            width: auto !important;
+        }
+    }
+}
+
+
+form {
+    .MuiAutocomplete-root {
+        .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+            padding-top: 0;
+            padding-bottom: 0;
+        
+        }
+        
+        label {
+            margin-top: -8px;
+
+            &.MuiFormLabel-filled,
+            &.Mui-focused {
+                margin-top: 0;
+            }
+        }
+    }
+
+    // .MuiTextField-root {
+    //     .MuiOutlinedInput-input {
+    //         padding-top: 9.6px;
+    //         padding-bottom: 9.6px;
+    //     }
+    // }
+
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+}
+
+table {
+    .MuiTableHead-root {
+        .MuiTableRow-head {
+            .MuiTableCell-root {
+                background:  #D3D3D3;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.state-results-container, .calculator-editing {
+    margin-top: 40px;
+
+    .deadline-results-header {
+        margin-bottom: 10px;
+        padding: 5px 8px;
+    }
+
+    ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+            padding: 5px 8px;
+
+            &:nth-child(even) .MuiAccordionSummary-root {
+                background: #ddd;
+            }
+
+            .MuiAccordionSummary-root.Mui-disabled {
+                opacity: 1;
+
+                .MuiAccordionSummary-expandIcon {
+                    opacity: 0;
+                }
+            }
+
+            .MuiAccordion-root .row {
+                width: 100%;
+            }
+        }
+
+    }
+
+    .MuiAccordionDetails-root {
+        display: block;
+
+        .updated-date p {
+            margin-bottom: 0;
+            text-align: right;
+        }
+    }
+}
+
+.calculator-editing {
+    li {
+        margin-bottom: 50px;
+
+        .row {
+            margin-bottom: 10px;
+        }
+
+        .update-button-container {
+            display: flex;
+            justify-content: flex-end;
+
+            .MuiButton-containedPrimary {
+                box-shadow: none;
+            }
+        }
+    }
+
+    .add-new-listing {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.delete-modal .modal-content {
+    width: 400px;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    top: 200px;
+
+    .modal-header {
+        border-bottom: 0;
+        text-align: center;
+        display: block;
+    }
+
+    button {
+        display: inline-block;
+    }
+}
+
+.accordion-content {
+    margin-top: 1rem;
+}
+
+.secondary-container {
+    margin-top: 40px;
+}
+
+:root {
+    --amplify-primary-color: #11a29b;
+    --amplify-primary-tint: #3f6060;
+    --amplify-primary-shade: #2dba89;
+    --amplify-background-color: #e0faf4;
+  }
+
+.button-right-container {
+    display: flex;
+    margin-top: 20px;
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+}
+
+.deletion-warning {
+    background: red;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
