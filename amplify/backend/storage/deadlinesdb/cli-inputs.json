@@ -1,0 +1,14 @@
+{
+  "resourceName": "deadlinesdb",
+  "tableName": "dea",
+  "partitionKey": {
+    "fieldName": "name",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "registrationDeadlineType",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
