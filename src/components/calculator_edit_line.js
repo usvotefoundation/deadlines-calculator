@@ -64,7 +64,7 @@ function CalculatorEditLine (props) {
         } else {
             try {
                 const stateData = await API.graphql(graphqlOperation(updateState, {input: props.item}));
-                console.log('changed data?')
+                console.log('Update sucessful')
             
                 let result = stateData.data.updateState;
             } catch (error) {
