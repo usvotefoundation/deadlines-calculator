@@ -15,12 +15,6 @@
     "categories": {
       "auth": {
         "newcalculator": {}
-      },
-      "function": {
-        "deadlinesfunction": {
-          "deploymentBucketName": "amplify-amplify7433496631514-staging-220938-deployment",
-          "s3Key": "amplify-builds/deadlinesfunction-73333138382b49422f76-build.zip"
-        }
       }
     }
   }

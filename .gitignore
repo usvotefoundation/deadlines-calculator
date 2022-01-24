@@ -17,3 +17,7 @@ amplify-build-config.json
 amplify-gradle-config.json
 amplifytools.xcconfig
 .secret-*
+
+# graphql and dynamodb info
+GraphQL endpoint: https://wu6dad72gbez5enhkufc2yxzxy.appsync-api.us-east-1.amazonaws.com/graphql
+GraphQL API KEY: da2-7mp7uwkmzbg45bajlauseqs4pi

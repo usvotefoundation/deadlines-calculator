@@ -7,6 +7,9 @@ import awsExports from './aws-exports';
 import React from 'react';
 import './styles/main.scss';
 
+import AddDelete from './utilities/add_delete'
+import SearchForm from './components/search_form';
+
 Amplify.configure(awsExports);
 
 function App({ signOut, user }) {
@@ -22,7 +25,7 @@ function App({ signOut, user }) {
         </div>
       </header>
       {/* Search Form, where you can see the contents of the calculator and the deadlines */}
-      {/* <SearchForm /> */}
+      <SearchForm />
 
       {/* Add and delete data to the database en masse */}
       {/* <AddDelete />  */}

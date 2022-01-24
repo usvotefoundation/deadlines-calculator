@@ -32,20 +32,10 @@ const awsmobile = {
     "aws_cognito_verification_mechanisms": [
         "EMAIL"
     ],
-    "aws_cloud_logic_custom": [
-        {
-            "name": "deadlinesapi",
-            "endpoint": "https://1bqbzx1pod.execute-api.us-east-1.amazonaws.com/staging",
-            "region": "us-east-1"
-        }
-    ],
-    "aws_dynamodb_all_tables_region": "us-east-1",
-    "aws_dynamodb_table_schemas": [
-        {
-            "tableName": "dea-staging",
-            "region": "us-east-1"
-        }
-    ]
+    "aws_appsync_graphqlEndpoint": "https://wu6dad72gbez5enhkufc2yxzxy.appsync-api.us-east-1.amazonaws.com/graphql",
+    "aws_appsync_region": "us-east-1",
+    "aws_appsync_authenticationType": "API_KEY",
+    "aws_appsync_apiKey": "da2-7mp7uwkmzbg45bajlauseqs4pi"
 };
 
 
