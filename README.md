@@ -35,7 +35,7 @@
 1. Find the spreadsheet and make sure it’s updated.
 2. Clean the spreadsheet to make sure the formatting matches up.
 3. Download the spreadsheet.
-4. Upload the spreadsheet to a [CSV to JSON converter][https://csvjson.com/] (try this link, if it doesn't work anymore just google one and use it).
+4. Upload the spreadsheet to a [CSV to JSON converter](https://csvjson.com/) (try this link, if it doesn't work anymore just google one and use it).
 5. Download the JSON converted file.
 6. Run scripts locally
 	1. Clone the repository to your computer.
@@ -67,5 +67,5 @@
 * If you get stuck, email me at evans.jalia@gmail.com and I’ll see what I can do to help. Stack overflow and google are also your friends.
 
 ### Helpful links if you run into trouble
-* [Working with Data in DynamoDB from React with AWS Amplify][https://www.youtube.com/watch?v=kqi4gPfdVHY&t=687s&ab_channel=CompleteCoding]
-* [Building the GraphQL Database][https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/module-four/?e=gs2020&p=build-a-react-app-intro]
+* [Working with Data in DynamoDB from React with AWS Amplify](https://www.youtube.com/watch?v=kqi4gPfdVHY&t=687s&ab_channel=CompleteCoding)
+* [Building the GraphQL Database](https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/module-four/?e=gs2020&p=build-a-react-app-intro)
