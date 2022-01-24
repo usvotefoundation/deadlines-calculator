@@ -1,5 +1,8 @@
 # US Vote Deadlines Calculator
-#### Built in January 2021 by Jalia Evans
+##### Built in January 2021 by Jalia Evans
+
+\
+\
 
 ## Documentation/Use Case Notes
 ### Committing code
