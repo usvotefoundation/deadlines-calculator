@@ -1,26 +1,25 @@
 # US Vote Deadlines Calculator
 ##### Built in January 2021 by Jalia Evans
 
-\
+&nbsp;
 
 ## Documentation/Use Case Notes
 ### Committing code
 * If you’ve just committed code to the GitHub, wait 5-10 minutes to make sure the live site has finished the build and deployed again. You can check the progress in the Amplify Console App’s Hosting Environment.
 * If you’re having issues, read the build logs.
-\
+&nbsp;
 ### Data Entry Notes
 * Stop using “same” when entering information. Copy and paste the content if it’s the same.
 * If you’re going to format a spreadsheet for entering into the database, follow the formatting of the “Database-Friendly” directions to clean the data. It is not a lot of work and requires no programming experience.
 * Make sure that each row in the spreadsheet has the state’s name. The row needs to have the state name because each row is entered into the database one by one.
 * Update BOTH the GoogleSheets page and the calculator when you’re looking to update information. The GoogleSheet is a good backup for the calculator in case Amplify or DynamoDB lose support, and the database is a good backup in case the GoogleSheet is compromised.
-\
+&nbsp;
 ### AWS Amplify Console / DynamoDB
 * Front End of Amplify is in N. Virginia, back end (DynamoDB) Is in N. Virginia
 * Database table name: State-f2jbkneporaojpugeuji4qit5u-staging
-\
+&nbsp;
 ### Database Backup
-* To download backup of database, you go to the dynamoDB database table  
-State-f2jbkneporaojpugeuji4qit5u-staging
+* To download backup of database, you go to the dynamoDB database table: State-f2jbkneporaojpugeuji4qit5u-staging
 	1. Use sidebar to go to ‘Explore Items’
 	2. Open the dropdown that says “Scan/Query items”. It will show text above the database items that will tell you if all of the items are loaded yet. Click “Retrieve Next Page” until the text disappears. Now you will have all of the items in the database ready for download.
 	3. Go to actions and press “download results to CSV”
@@ -30,12 +29,12 @@ State-f2jbkneporaojpugeuji4qit5u-staging
 * If you have access to the code and are comfortable committing to Github, you can add the CSV to the election_formulas/legacy_files folder. 
 	* Title it “calculator_content_{month_year}”. 
 	* It’s not necessary, but might be good practice for the future. Make sure that you commit to Github after you add it.
-\
+&nbsp;
 ### Mass addition to or mass emptying of the Database
 1. Find the spreadsheet and make sure it’s updated.
 2. Clean the spreadsheet to make sure the formatting matches up.
 3. Download the spreadsheet.
-4. Upload the spreadsheet to a CSV to JSON converter (just google one and enter it).
+4. Upload the spreadsheet to a [CSV to JSON converter][https://csvjson.com/] (try this link, if it doesn't work anymore just google one and use it).
 5. Download the JSON converted file.
 6. Run scripts locally
 	1. Clone the repository to your computer.
@@ -52,7 +51,7 @@ State-f2jbkneporaojpugeuji4qit5u-staging
 7. Check “git status” in your terminal to make sure you reversed anything you changed. If there are files that have been changed, figure out where the differences are and reset those changes on your local branch.
 8. You should be good to go!
 9. When you’re running the scripts to mass add/clear the database, it can take a few minutes. There is a progress bar, but if you’re concerned that something has gone wrong, open the console in the window and check for error methods. I’ve added lots of console logs to let you know where the server is in the process so it will be easy to see if the process is just taking a while or there was an error in the scripts.
-\
+&nbsp;
 ### Troubleshooting
 * If you want to check and see if all of the items you’ve uploaded or deleted made it into the database, scroll to the bottom of your spreadsheet to see the total number of lines. Then go to the AWS DynamoDB site and check that number against the item count in the table. It should likely be the count of your spreadsheet - 1 (because the spreadsheet has a top row with the column headers inside it). At the end of the Add and Delete pages in the browser, there should be text that tells you how many items you added or deleted. Check that number against your spreadsheet number - 1 and you should have the same number. If not, check the console for any error messages.
 * When you are in the mass AddDelete mode of the site, look in the console and reload the page. It will tell you how many items it can see that are in the database.
@@ -65,3 +64,7 @@ State-f2jbkneporaojpugeuji4qit5u-staging
 	* JSON for the data structure
 	* React.js for the front end framework
 * If you get stuck, email me at evans.jalia@gmail.com and I’ll see what I can do to help. Stack overflow and google are also your friends.
+&nbsp;
+### Helpful links if you run into trouble
+* [Working with Data in DynamoDB from React with AWS Amplify][https://www.youtube.com/watch?v=kqi4gPfdVHY&t=687s&ab_channel=CompleteCoding]
+* [Building the GraphQL Database][https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/module-four/?e=gs2020&p=build-a-react-app-intro]
