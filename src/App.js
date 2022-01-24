@@ -20,8 +20,8 @@ function App({ signOut, user }) {
           <h1>Voting Deadline Calculator</h1>
         </div>
         <div className="sign-out">
-          <div className="username-container">{user.attributes.preferred_username}</div>
-          <Button variant="outlined" color="info" onClick={signOut}>Sign out</Button>
+          Active User: <strong>{user.attributes.preferred_username}</strong>
+          <Button sx={{ml: 1.5}} variant="outlined" size="small" color="inherit" onClick={signOut}>Sign out</Button>
         </div>
       </header>
       {/* Search Form, where you can see the contents of the calculator and the deadlines */}

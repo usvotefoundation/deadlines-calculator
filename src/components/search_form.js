@@ -53,15 +53,12 @@ function SearchForm () {
         try {
             const stateData = await API.graphql(graphqlOperation(listStates, {limit: 2000}));
             const stateList = stateData.data.listStates.items;
-            console.log('raw stateList', stateList)
 
             let results = stateList.filter((item) => item.name === selectedState);
 
             setStates(results);
 
             console.log('finished fetching states from API');
-            console.log('state results for '+ selectedState)
-            console.log('date results for '+ selectedElectionDate)
 
             setLoading(false);
             setLoadedStatus(true);
