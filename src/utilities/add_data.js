@@ -65,8 +65,6 @@ function AddData() {
         consoleNewData = 'adding new items to database that have not been in the calculator before'
       }
       
-      console.log(consoleNewData)
-      
       fileData.forEach(async (item) => {
         const {name, registrationDeadlineType, dateType, edRelation, time, laws, updater} = item;
 
