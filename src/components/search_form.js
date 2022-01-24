@@ -3,10 +3,15 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@mui/material/Button';
 import StatesResults from './states_results';
 import Grid from '@material-ui/core/Grid';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
+// import Select from '@material-ui/core/Select';
+// import MenuItem from '@material-ui/core/MenuItem';
+// import FormControl from '@material-ui/core/FormControl';
+// import InputLabel from '@material-ui/core/InputLabel';
+
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 import {useState, useEffect } from 'react';
 import {API, graphqlOperation} from 'aws-amplify';
@@ -91,20 +96,19 @@ function SearchForm () {
                 <Grid container spacing={1}>
                     <Grid item xs={7}>
                         <FormControl fullWidth>
-                        <label className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined" style={{backgroundColor: "white", paddingLeft: "5px", paddingRight: "5px"}}>Select a State</label>
+                            <InputLabel id="demo-simple-select-label">Select State</InputLabel>
                             <Select
-                                labelId="state-select-label"
-                                id="state-select"
-                                value={selectedState}
-                                variant="outlined"
-                                onChange={(event) => {
-                                    setSelectedState(event.target.value)
-                                }}
-                                fullWidth
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={selectedState}
+                            label="Select State"
+                            onChange={(event) => {
+                                setSelectedState(event.target.value)
+                            }}
                             >
-                                {stateNames.map((item, index) => (
-                                    <MenuItem value={item} key={index}>{item}</MenuItem>
-                                ))}
+                            {stateNames.map((item, index) => (
+                                <MenuItem value={item} key={index}>{item}</MenuItem>
+                            ))}
                             </Select>
                         </FormControl>
                     </Grid>

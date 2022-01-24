@@ -27,29 +27,9 @@
 
 
 form {
-    .MuiAutocomplete-root {
-        .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
-            padding-top: 0;
-            padding-bottom: 0;
-        
-        }
-        
-        label {
-            margin-top: -8px;
-
-            &.MuiFormLabel-filled,
-            &.Mui-focused {
-                margin-top: 0;
-            }
-        }
+    .MuiSelect-select {
+        min-height: unset !important;
     }
-
-    // .MuiTextField-root {
-    //     .MuiOutlinedInput-input {
-    //         padding-top: 9.6px;
-    //         padding-bottom: 9.6px;
-    //     }
-    // }
 
     .button-container {
         display: flex;
