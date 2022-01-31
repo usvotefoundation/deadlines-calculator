@@ -28,6 +28,9 @@
 * Front End of Amplify is in N. Virginia, back end (DynamoDB) Is in N. Virginia
 * Database table name: State-f2jbkneporaojpugeuji4qit5u-staging
 
+### API Key
+* Amazon AppSync (in the backend panel of the amplify console for the app) will reset the API Key on January 7th, 2023. To reset it, go to the AppSync backend, create a new API Key and select it as the new one. Delete the old API key. Make sure to name the API Key in the description field, it will make things easier for others to read. You shouldn't need to give everyone new API Key, the app itself should manage it when it's running.
+
 ### Committing code
 * If you’ve just committed code to the GitHub, wait 5-10 minutes to make sure the live site has finished the build and deployed again. You can check the progress in the Amplify Console App’s Hosting Environment.
 * If you’re having issues, read the build logs.
