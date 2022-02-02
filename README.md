@@ -1,7 +1,7 @@
 # US Vote Deadlines Calculator Documentation
 ##### Built in January 2021 by Jalia Evans
 
-## [Live site of API](https://main.d1330uqkw3jlf8.amplifyapp.com/)
+## [Live site of API](https://aws-deployment.d1330uqkw3jlf8.amplifyapp.com/)
 
 ## Front End
 ### Data Entry Notes
