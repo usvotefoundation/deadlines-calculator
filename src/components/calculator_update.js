@@ -10,7 +10,7 @@ function CalculatorUpdate (props) {
         propsResults = props.results;
 
         let emptyItem = {
-            'name': props.state,
+            'stateName': props.stateName,
             'registrationDeadlineType': '',
             'dateType': '',
             'time': '',

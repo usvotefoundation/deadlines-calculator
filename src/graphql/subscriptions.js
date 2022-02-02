@@ -5,13 +5,16 @@ export const onCreateState = /* GraphQL */ `
   subscription OnCreateState {
     onCreateState {
       id
-      name
+      stateName
       registrationDeadlineType
       dateType
       edRelation
       time
       laws
       updater
+      updateDate
+      updatedLegal
+      updatedNotes
       createdAt
       updatedAt
     }
@@ -21,13 +24,16 @@ export const onUpdateState = /* GraphQL */ `
   subscription OnUpdateState {
     onUpdateState {
       id
-      name
+      stateName
       registrationDeadlineType
       dateType
       edRelation
       time
       laws
       updater
+      updateDate
+      updatedLegal
+      updatedNotes
       createdAt
       updatedAt
     }
@@ -37,13 +43,16 @@ export const onDeleteState = /* GraphQL */ `
   subscription OnDeleteState {
     onDeleteState {
       id
-      name
+      stateName
       registrationDeadlineType
       dateType
       edRelation
       time
       laws
       updater
+      updateDate
+      updatedLegal
+      updatedNotes
       createdAt
       updatedAt
     }

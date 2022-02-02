@@ -48,45 +48,23 @@ function SearchForm () {
     
     const fetchStates = async () => {
         setLoading(true);
-        setLoadedStatus(false)
+        setLoadedStatus(false);
 
         try {
-            const stateData = await API.graphql(graphqlOperation(listStates, {limit: 2000}));
-            const stateList = stateData.data.listStates.items;
+          const stateData = await API.graphql(graphqlOperation(listStates, {limit: 2000}));
+          const stateList = stateData.data.listStates.items;
 
-            let results = stateList.filter((item) => item.name === selectedState);
+          let results = stateList.filter((item) => item.stateName === selectedState);
 
-            setStates(results);
-
-            console.log('finished fetching states from API');
-
-            setLoading(false);
-            setLoadedStatus(true);
-        } catch (error) {
-            console.log('error when fetching states', error);
-        }
-
-    }
-
-    // const fetchStates = async () => {
-    //     setLoading(true);
-    //     setLoadedStatus(false)
-
-    //     try {
-    //         const stateData = await API.graphql(graphqlOperation(listStates, {limit: 1000}));
-    //         const stateList = stateData.data.listStates.items;
-    //         let results = stateList.filter((item) => item.name === selectedState);
-
-    //         setStates(results);
-    //         console.log('finished fetching states from API');
-    //         setLoading(false);
-    //         setLoadedStatus(true);
-    //     } catch (error) {
-    //         console.log('error when fetching states', error);
-    //     }
-    // }
+          setStates(results);
+          setLoading(false);
+          setLoadedStatus(true);
     
-
+        } catch (error) {
+          console.log('error when fetching states', error);
+        }
+    }
+    
     return (
         <div className="search-form">
             <form>

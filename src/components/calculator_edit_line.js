@@ -42,11 +42,11 @@ function CalculatorEditLine (props) {
         
         if (!props.item.id) {
             console.log('adding new listing')
-            const {id, name, registrationDeadlineType, dateType, edRelation, time, laws, updater} = props.item;
+            const {id, stateName, registrationDeadlineType, dateType, edRelation, time, laws, updater} = props.item;
 
             let createStateInput = {
                 id: props.id,
-                name: props.stateName,
+                stateName: props.stateName,
                 registrationDeadlineType,
                 dateType,
                 edRelation,
@@ -94,8 +94,11 @@ function CalculatorEditLine (props) {
         delete props.item.laws;
         delete props.item.updater;
         delete props.item.createdAt;
-        delete props.item.name;
+        delete props.item.stateName;
         delete props.item.updatedAt;
+        delete props.item.updateDate;
+        delete props.item.updatedLegal;
+        delete props.item.updatedNotes;
         delete props.item.deadlineDate;
 
         if (props.item.id) {

@@ -66,7 +66,7 @@ function AddData() {
       }
       
       fileData.forEach(async (item) => {
-        const {name, registrationDeadlineType, dateType, edRelation, time, laws, updater} = item;
+        const {stateName, registrationDeadlineType, dateType, edRelation, time, laws, updater, updatedLegal, updatedNotes, updateDate} = item;
 
         let createStateInput = {};
 
@@ -80,17 +80,22 @@ function AddData() {
         } else {
           createStateInput = {
             id: uuid(),
-            name,
+            stateName,
             registrationDeadlineType,
             dateType,
             edRelation,
             time,
             laws,
-            updater
+            updater,
+            updatedLegal,
+            updatedNotes,
+            updateDate
           }
         }
 
         try {
+          console.log(createStateInput)
+          console.log('---------')
           setAddNewState(true)
           await API.graphql(graphqlOperation(createState, {input: createStateInput}))
           itemsAdding++;

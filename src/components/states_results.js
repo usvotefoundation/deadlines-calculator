@@ -113,10 +113,21 @@ function StatesResults (props) {
                 <Collapse in={open} timeout="auto" unmountOnExit>
                     <div className="accordion-content">
                         {row.laws.length > 0
-                            ? <div className="laws"><p>{row.laws}</p></div> 
+                            ? <div className="laws">
+                                <p>{row.laws}</p>
+                                { row.updatedLegal &&
+                                    <p>Updated Legal Content: {row.updatedLegal}</p>
+                                }
+                                { row.updatedNotes &&
+                                    <p>Updated Legal Notes: {row.updateNotes}</p>
+                                }
+                            </div> 
                             : ''
                         }
                         <div className="updated-date"><p>Updated At: {`${updatedFormat(row)}`}</p></div>
+                        { row.updater && 
+                        <div className="updater-name"><p>Updated By: {row.updater}</p></div>
+                        }
                     </div>
                 </Collapse>
               </TableCell>

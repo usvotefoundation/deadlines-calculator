@@ -8,13 +8,16 @@ export const createState = /* GraphQL */ `
   ) {
     createState(input: $input, condition: $condition) {
       id
-      name
+      stateName
       registrationDeadlineType
       dateType
       edRelation
       time
       laws
       updater
+      updateDate
+      updatedLegal
+      updatedNotes
       createdAt
       updatedAt
     }
@@ -27,13 +30,16 @@ export const updateState = /* GraphQL */ `
   ) {
     updateState(input: $input, condition: $condition) {
       id
-      name
+      stateName
       registrationDeadlineType
       dateType
       edRelation
       time
       laws
       updater
+      updateDate
+      updatedLegal
+      updatedNotes
       createdAt
       updatedAt
     }
@@ -46,13 +52,16 @@ export const deleteState = /* GraphQL */ `
   ) {
     deleteState(input: $input, condition: $condition) {
       id
-      name
+      stateName
       registrationDeadlineType
       dateType
       edRelation
       time
       laws
       updater
+      updateDate
+      updatedLegal
+      updatedNotes
       createdAt
       updatedAt
     }

@@ -5,13 +5,16 @@ export const getState = /* GraphQL */ `
   query GetState($id: ID!) {
     getState(id: $id) {
       id
-      name
+      stateName
       registrationDeadlineType
       dateType
       edRelation
       time
       laws
       updater
+      updateDate
+      updatedLegal
+      updatedNotes
       createdAt
       updatedAt
     }
@@ -26,13 +29,16 @@ export const listStates = /* GraphQL */ `
     listStates(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        name
+        stateName
         registrationDeadlineType
         dateType
         edRelation
         time
         laws
         updater
+        updateDate
+        updatedLegal
+        updatedNotes
         createdAt
         updatedAt
       }

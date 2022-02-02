@@ -54,9 +54,12 @@ function ClearData() {
         delete item.laws;
         delete item.updater;
         delete item.createdAt;
-        delete item.name;
+        delete item.stateName;
+        delete item.updatedLegal;
+        delete item.updatedNotes;
         delete item.updatedAt;
         delete item.deadlineDate;
+        delete item.updateDate;
 
         try {        
             const stateData = await API.graphql(graphqlOperation(deleteState, {input: item}));
