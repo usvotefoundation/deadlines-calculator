@@ -25,10 +25,10 @@ function App({ signOut, user }) {
         </div>
       </header>
       {/* Search Form, where you can see the contents of the calculator and the deadlines */}
-      {/* <SearchForm /> */}
+      <SearchForm />
 
       {/* Add and delete data to the database en masse */}
-      <AddDelete /> 
+      {/* <AddDelete />  */}
   </div>
   );
 }
