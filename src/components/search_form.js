@@ -54,7 +54,7 @@ function SearchForm () {
           const stateData = await API.graphql(graphqlOperation(listStates, {limit: 2000}));
           const stateList = stateData.data.listStates.items;
 
-          let results = stateList.filter((item) => item.stateName === selectedState);
+          let results = stateList.filter((item) => item.stateName === selectedState.replace(/[\W_]+/g,""));
 
           setStates(results);
           setLoading(false);
