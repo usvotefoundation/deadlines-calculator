@@ -1,0 +1,15 @@
+{
+  "features": {
+    "graphqltransformer": {
+      "showfieldauthnotification": false
+    },
+    "frontend-ios": {},
+    "auth": {},
+    "codegen": {},
+    "appsync": {},
+    "latestregionsupport": {},
+    "project": {
+      "overrides": true
+    }
+  }
+}

@@ -13,7 +13,6 @@ export type AmplifyDependentResourcesAttributes = {
     },
     "api": {
         "newcalculator": {
-            "GraphQLAPIKeyOutput": "string",
             "GraphQLAPIIdOutput": "string",
             "GraphQLAPIEndpointOutput": "string"
         }
