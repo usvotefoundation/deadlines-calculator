@@ -1,6 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import Table from '@mui/material/Table';
@@ -9,9 +7,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -47,7 +43,7 @@ function StatesResults (props) {
                 electionCounter = parseInt(electionCounter[2]) * -1 + 1;
                 break;
             case 'ED +':
-                electionCounter = parseInt(electionCounter[2]);
+                electionCounter = parseInt(electionCounter[2]) + 1;
                 break;
             default:
                 electionCounter = '';
@@ -57,7 +53,7 @@ function StatesResults (props) {
         var date = new Date(props.electionDate);
         var momentDate = moment(date);
         let calculatedDate = momentDate.add(electionCounter, 'days');
-        let formatted = dateFormat(calculatedDate._d, "mmmm dS, yyyy");
+        let formatted = dateFormat(calculatedDate._d, "mm/d/yyyy");
 
         // does electionCounter[2] contain a slash?
 
@@ -81,8 +77,6 @@ function StatesResults (props) {
             }
         });
     }
-
-    const displayDate = dateFormat(new Date(props.electionDate), "dddd, mmmm dS, yyyy");
 
     function Row(props) {
         const { row } = props;
