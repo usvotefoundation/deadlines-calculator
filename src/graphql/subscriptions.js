@@ -2,8 +2,8 @@
 // this is an auto generated file. This will be overwritten
 
 export const onCreateState = /* GraphQL */ `
-  subscription OnCreateState {
-    onCreateState {
+  subscription OnCreateState($filter: ModelSubscriptionStateFilterInput) {
+    onCreateState(filter: $filter) {
       id
       stateName
       registrationDeadlineType
@@ -21,8 +21,8 @@ export const onCreateState = /* GraphQL */ `
   }
 `;
 export const onUpdateState = /* GraphQL */ `
-  subscription OnUpdateState {
-    onUpdateState {
+  subscription OnUpdateState($filter: ModelSubscriptionStateFilterInput) {
+    onUpdateState(filter: $filter) {
       id
       stateName
       registrationDeadlineType
@@ -40,8 +40,8 @@ export const onUpdateState = /* GraphQL */ `
   }
 `;
 export const onDeleteState = /* GraphQL */ `
-  subscription OnDeleteState {
-    onDeleteState {
+  subscription OnDeleteState($filter: ModelSubscriptionStateFilterInput) {
+    onDeleteState(filter: $filter) {
       id
       stateName
       registrationDeadlineType
